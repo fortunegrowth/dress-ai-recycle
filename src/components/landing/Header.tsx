@@ -12,32 +12,20 @@ export function Header() {
   }, []);
 
   return (
-    <header
-      className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "border-b border-border/60 bg-background/90 backdrop-blur-md"
-          : "border-b border-transparent bg-transparent"
-      }`}
-    >
+    <header className="fixed top-0 inset-x-0 z-50 border-b border-border/60 bg-background/92 shadow-sm backdrop-blur-md transition-all duration-300">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
         <a href="#top" className="flex items-center gap-2">
           <img src={mark} alt="" className="h-9 w-9" />
           <img
             src={logoDark}
             alt="urerun"
-            className={`h-5 sm:h-6 w-auto transition ${
-              scrolled ? "opacity-100" : "brightness-0 invert"
-            }`}
+            className="h-5 w-auto opacity-100 transition sm:h-6"
           />
         </a>
         <div className="flex items-center gap-2 sm:gap-3">
           <a
             href="/login"
-            className={`hidden sm:inline-flex items-center justify-center rounded-full px-3 py-2 text-xs font-medium transition ${
-              scrolled
-                ? "text-foreground hover:text-gold"
-                : "text-white/90 hover:text-white"
-            }`}
+            className="hidden items-center justify-center rounded-full px-3 py-2 text-xs font-medium text-foreground transition hover:text-gold sm:inline-flex"
           >
             ログイン
           </a>
