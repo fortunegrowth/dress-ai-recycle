@@ -36,6 +36,11 @@ export function Hero() {
       className="relative h-[100svh] min-h-[640px] w-full overflow-hidden text-white"
     >
       <div
+        aria-hidden
+        className="absolute inset-0 -z-30"
+        style={{ backgroundColor: "oklch(0.18 0.02 260)" }}
+      />
+      <div
         ref={bgRef}
         aria-hidden
         className="absolute inset-0 -z-20 will-change-transform"
@@ -43,6 +48,7 @@ export function Hero() {
           backgroundImage: `url(${HERO_BG})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
+          backgroundColor: "oklch(0.18 0.02 260)",
         }}
       />
       <div
