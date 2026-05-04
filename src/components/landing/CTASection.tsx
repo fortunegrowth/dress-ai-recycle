@@ -11,11 +11,17 @@ export function CTASection() {
     >
       <div
         aria-hidden
+        className="absolute inset-0 -z-30"
+        style={{ backgroundColor: "oklch(0.18 0.02 260)" }}
+      />
+      <div
+        aria-hidden
         className="absolute inset-0 -z-20"
         style={{
           backgroundImage: `url(${CTA_BG})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
+          backgroundColor: "oklch(0.18 0.02 260)",
         }}
       />
       <div
