@@ -3,6 +3,8 @@ import { useEffect } from "react";
 import { Header } from "@/components/landing/Header";
 import { Hero } from "@/components/landing/Hero";
 import { Problem } from "@/components/landing/Problem";
+import { Brands } from "@/components/landing/Brands";
+import { Condition } from "@/components/landing/Condition";
 import { Solution } from "@/components/landing/Solution";
 import { WhyUs } from "@/components/landing/WhyUs";
 import { Cycle } from "@/components/landing/Cycle";
@@ -16,9 +18,7 @@ export const Route = createFileRoute("/")({
 });
 
 function Index() {
-  // Reveal-on-scroll for any element with .reveal class
   useEffect(() => {
-    const els = document.querySelectorAll<HTMLElement>(".reveal");
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((e) => {
@@ -30,8 +30,17 @@ function Index() {
       },
       { threshold: 0.12 }
     );
-    els.forEach((el) => observer.observe(el));
-    return () => observer.disconnect();
+    const observe = () =>
+      document
+        .querySelectorAll<HTMLElement>(".reveal:not(.is-visible), .reveal-left:not(.is-visible)")
+        .forEach((el) => observer.observe(el));
+    observe();
+    // re-observe on resize for layout-shifted nodes
+    const t = setTimeout(observe, 300);
+    return () => {
+      clearTimeout(t);
+      observer.disconnect();
+    };
   }, []);
 
   return (
@@ -40,6 +49,8 @@ function Index() {
       <main>
         <Hero />
         <Problem />
+        <Brands />
+        <Condition />
         <Solution />
         <WhyUs />
         <Cycle />

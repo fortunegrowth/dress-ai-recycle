@@ -1,174 +1,76 @@
-import { useForm, type Resolver } from "react-hook-form";
-import { z } from "zod";
-import { toast } from "sonner";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import { Sparkles } from "lucide-react";
+import { ArrowRight, Sparkles } from "lucide-react";
 
-const schema = z.object({
-  name: z.string().trim().min(1, "お名前を入力してください").max(50, "50文字以内で入力してください"),
-  email: z.string().trim().email("正しいメールアドレスを入力してください").max(255),
-  category: z.string().min(1, "カテゴリを選択してください"),
-});
-
-type FormValues = z.infer<typeof schema>;
-
-const zodResolver: Resolver<FormValues> = async (values) => {
-  const result = schema.safeParse(values);
-  if (result.success) {
-    return { values: result.data, errors: {} };
-  }
-  const errors: Record<string, { type: string; message: string }> = {};
-  for (const issue of result.error.issues) {
-    const key = issue.path.join(".") || "root";
-    if (!errors[key]) errors[key] = { type: issue.code, message: issue.message };
-  }
-  return { values: {} as FormValues, errors: errors as never };
-};
-
-const categories = [
-  "パーティードレス",
-  "イブニングドレス / ロングドレス",
-  "ワンピース",
-  "ウェディングドレス",
-  "その他",
-];
+const CTA_BG =
+  "https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=1920&q=80";
 
 export function CTASection() {
-  const {
-    register,
-    handleSubmit,
-    setValue,
-    watch,
-    reset,
-    formState: { errors, isSubmitting },
-  } = useForm<FormValues>({
-    resolver: zodResolver,
-    defaultValues: { name: "", email: "", category: "" },
-  });
-
-  const onSubmit = async (data: FormValues) => {
-    await new Promise((r) => setTimeout(r, 600));
-    toast.success("お申し込みありがとうございます", {
-      description: `${data.name}さん、追ってご連絡いたします。`,
-    });
-    reset();
-  };
-
-  const category = watch("category");
-
   return (
     <section
       id="cta"
-      className="relative py-20 sm:py-28 overflow-hidden"
+      className="relative overflow-hidden py-28 sm:py-36 text-white"
     >
+      <div
+        aria-hidden
+        className="absolute inset-0 -z-20"
+        style={{
+          backgroundImage: `url(${CTA_BG})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      />
       <div
         aria-hidden
         className="absolute inset-0 -z-10"
         style={{
           background:
-            "linear-gradient(180deg, color-mix(in oklab, var(--gold) 10%, var(--background)) 0%, var(--background) 100%)",
+            "linear-gradient(180deg, rgba(15,20,35,0.85) 0%, rgba(15,20,35,0.92) 100%)",
         }}
       />
-      <div className="mx-auto max-w-3xl px-4 sm:px-6">
-        <div className="reveal text-center">
-          <span className="inline-flex items-center gap-1.5 rounded-full border border-gold/40 bg-gold/10 px-3 py-1 text-xs font-medium">
-            <Sparkles className="h-3.5 w-3.5 text-gold" />
-            β版テスト参加者を限定募集中
-          </span>
-          <h2 className="mt-5 text-3xl sm:text-4xl">
-            今すぐ無料査定を申し込む。
-          </h2>
-          <p className="mt-4 text-muted-foreground">
-            メールアドレスとお名前、ドレスのカテゴリだけで完了します。
-          </p>
-        </div>
 
-        <form
-          onSubmit={handleSubmit(onSubmit)}
-          className="reveal mt-10 rounded-3xl border border-border bg-card p-6 sm:p-9 shadow-xl shadow-primary/5"
-          noValidate
-        >
-          <div className="space-y-5">
-            <div>
-              <Label htmlFor="name">お名前</Label>
-              <Input
-                id="name"
-                placeholder="山田 花子"
-                className="mt-2"
-                {...register("name")}
-              />
-              {errors.name && (
-                <p className="mt-1 text-xs text-destructive">{errors.name.message}</p>
-              )}
-            </div>
-            <div>
-              <Label htmlFor="email">メールアドレス</Label>
-              <Input
-                id="email"
-                type="email"
-                placeholder="you@example.com"
-                className="mt-2"
-                {...register("email")}
-              />
-              {errors.email && (
-                <p className="mt-1 text-xs text-destructive">{errors.email.message}</p>
-              )}
-            </div>
-            <div>
-              <Label htmlFor="category">ドレスカテゴリ</Label>
-              <Select
-                value={category}
-                onValueChange={(v) =>
-                  setValue("category", v, { shouldValidate: true })
-                }
-              >
-                <SelectTrigger id="category" className="mt-2">
-                  <SelectValue placeholder="カテゴリを選択" />
-                </SelectTrigger>
-                <SelectContent>
-                  {categories.map((c) => (
-                    <SelectItem key={c} value={c}>
-                      {c}
-                    </SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
-              {errors.category && (
-                <p className="mt-1 text-xs text-destructive">{errors.category.message}</p>
-              )}
-            </div>
+      <div className="mx-auto max-w-3xl px-5 sm:px-8 text-center">
+        <div className="reveal">
+          <span className="inline-flex items-center gap-1.5 rounded-full border border-gold/60 bg-black/20 px-3 py-1 text-[11px] font-medium backdrop-blur">
+            <Sparkles className="h-3.5 w-3.5 text-gold" />
+            会員登録は1分。すぐに査定を始められます。
+          </span>
+          <h2 className="mt-6 font-serif text-3xl sm:text-5xl leading-tight">
+            今すぐ無料査定を
+            <br className="sm:hidden" />
+            申し込む。
+          </h2>
+          <p className="mt-6 text-sm sm:text-base text-white/85 leading-relaxed">
+            会員登録のうえ、写真を送るだけで30秒以内に査定額をお届けします。
+            <br className="hidden sm:block" />
+            登録・査定は完全無料。手放す決断は、結果を見てからで大丈夫です。
+          </p>
+
+          <div className="mt-10 flex flex-col sm:flex-row gap-3 justify-center">
+            <a
+              href="/register"
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-gold px-8 py-4 text-sm font-medium text-gold-foreground shadow-xl shadow-black/30 transition hover:opacity-90"
+            >
+              無料で査定を申し込む
+              <ArrowRight className="h-4 w-4" />
+            </a>
+            <a
+              href="/login"
+              className="inline-flex items-center justify-center rounded-full border border-white/40 bg-white/10 px-8 py-4 text-sm font-medium text-white backdrop-blur transition hover:bg-white/20"
+            >
+              ログイン
+            </a>
           </div>
 
-          <button
-            type="submit"
-            disabled={isSubmitting}
-            className="mt-7 inline-flex w-full items-center justify-center rounded-full bg-primary px-6 py-3.5 text-sm font-medium text-primary-foreground shadow-lg shadow-primary/20 transition hover:opacity-90 disabled:opacity-60"
-          >
-            {isSubmitting ? "送信中..." : "無料査定に申し込む"}
-          </button>
-          <p className="mt-3 text-center text-[11px] text-muted-foreground">
-            送信後、担当者よりご連絡いたします。
+          <p className="mt-8 text-xs text-white/60">
+            ご不明点は{" "}
+            <a
+              href="/contact"
+              className="text-white underline underline-offset-4 hover:text-gold"
+            >
+              お問い合わせ
+            </a>{" "}
+            よりお気軽に。
           </p>
-        </form>
-
-        <p className="reveal mt-8 text-center text-sm text-muted-foreground">
-          ご不明点は{" "}
-          <a
-            href="mailto:fortunegrowth.corp@gmail.com"
-            className="text-foreground underline underline-offset-4 hover:text-gold"
-          >
-            fortunegrowth.corp@gmail.com
-          </a>{" "}
-          までお気軽に。
-        </p>
+        </div>
       </div>
     </section>
   );
