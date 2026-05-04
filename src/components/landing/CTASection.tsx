@@ -1,5 +1,4 @@
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm, type Resolver } from "react-hook-form";
 import { z } from "zod";
 import { toast } from "sonner";
 import { Input } from "@/components/ui/input";
@@ -21,6 +20,19 @@ const schema = z.object({
 
 type FormValues = z.infer<typeof schema>;
 
+const zodResolver: Resolver<FormValues> = async (values) => {
+  const result = schema.safeParse(values);
+  if (result.success) {
+    return { values: result.data, errors: {} };
+  }
+  const errors: Record<string, { type: string; message: string }> = {};
+  for (const issue of result.error.issues) {
+    const key = issue.path.join(".") || "root";
+    if (!errors[key]) errors[key] = { type: issue.code, message: issue.message };
+  }
+  return { values: {} as FormValues, errors: errors as never };
+};
+
 const categories = [
   "パーティードレス",
   "イブニングドレス / ロングドレス",
@@ -38,7 +50,7 @@ export function CTASection() {
     reset,
     formState: { errors, isSubmitting },
   } = useForm<FormValues>({
-    resolver: zodResolver(schema),
+    resolver: zodResolver,
     defaultValues: { name: "", email: "", category: "" },
   });
 
