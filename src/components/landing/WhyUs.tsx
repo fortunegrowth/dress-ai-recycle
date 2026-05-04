@@ -32,7 +32,7 @@ export function WhyUs() {
   return (
     <section className="py-24 sm:py-32 bg-background">
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
-        <div className="reveal max-w-2xl">
+        <div className="reveal max-w-2xl mx-auto text-center">
           <p className="text-[11px] uppercase tracking-[0.25em] text-gold">Why urerun</p>
           <h2 className="mt-4 font-serif text-3xl sm:text-5xl leading-tight">
             選ばれる、5つの理由。

@@ -2,7 +2,17 @@ import { Sparkles, UserCheck, ArrowRight } from "lucide-react";
 
 export function Trust() {
   return (
-    <section className="py-24 sm:py-32 bg-secondary/50">
+    <section className="relative isolate py-24 sm:py-32 overflow-hidden">
+      <div aria-hidden className="absolute inset-0 -z-20" style={{ backgroundColor: "oklch(0.94 0.01 90)" }} />
+      <div
+        aria-hidden
+        className="absolute inset-0 -z-10 opacity-20"
+        style={{
+          backgroundImage: `url(https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=1920&q=80)`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      />
       <div className="mx-auto max-w-5xl px-5 sm:px-8">
         <div className="reveal max-w-2xl">
           <p className="text-[11px] uppercase tracking-[0.25em] text-gold">Trust</p>
