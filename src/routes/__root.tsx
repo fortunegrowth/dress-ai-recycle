@@ -30,20 +30,20 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "urerun｜AIで30秒、高級ドレスの即時査定＋クーポン還元" },
+      { title: "urerun｜国内デザイナーズブランド特化のAI即時査定買取" },
       {
         name: "description",
         content:
-          "写真を撮って送るだけ。高級ドレス特化のAI査定で、適正価格＋レンタル提携クーポンを上乗せ。鑑定士監修ロジックで精度にコミット。urerun（運営：株式会社FortuneGrowth）。",
+          "Mame Kurogouchi・MURRAL・FETICOなど国内デザイナーズブランドに特化したAI即時査定買取サービス。30秒で適正価格＋クーポン還元。鑑定士が最終確認。urerun（運営：株式会社FortuneGrowth）。",
       },
       { name: "author", content: "株式会社FortuneGrowth" },
-      { property: "og:title", content: "urerun｜AIで30秒、高級ドレスの即時査定" },
+      { property: "og:title", content: "urerun｜国内デザイナーズ特化のAI即時査定買取" },
       {
         property: "og:description",
-        content: "写真を送るだけ。AI即時査定＋クーポン還元で、ドレスの新しい手放し方。",
+        content: "あなたのクローゼットから、次の誰かへ。AI×鑑定士で、ブランドの価値を正しく評価します。",
       },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },

@@ -1,71 +1,56 @@
-import {
-  Zap,
-  UserCheck,
-  Brain,
-  Target,
-  Gift,
-  Crown,
-  ShieldCheck,
-} from "lucide-react";
+import { Zap, Brain, UserCheck, Eye, Gift } from "lucide-react";
 
 const features = [
   {
     icon: Zap,
     title: "AI即時査定",
-    desc: "画像認識＋市場データで数秒以内に価格提示。",
-  },
-  {
-    icon: UserCheck,
-    title: "鑑定士が最終確認",
-    desc: "AIの結果をプロの鑑定士がレビューし最終買取価格を確定。機械任せにしない二重チェック体制。",
+    desc: "画像認識＋市場データで数秒以内に価格提示。査定結果をすぐに確認できます。",
   },
   {
     icon: Brain,
-    title: "鑑定士監修のロジック",
-    desc: "AIの査定アルゴリズム自体を鑑定士が設計・監修。精度の根拠が明確。",
+    title: "鑑定士が監修",
+    desc: "AIの査定アルゴリズム自体をプロの鑑定士が設計・監修。精度の根拠が明確です。",
   },
   {
-    icon: Target,
-    title: "高精度",
-    desc: "査定額と実買取価格の乖離率10%以内を目標。",
+    icon: UserCheck,
+    title: "鑑定士が最終チェック",
+    desc: "AIの結果をプロの鑑定士がレビューし最終買取価格を確定。機械任せにしない二重チェック体制。",
+  },
+  {
+    icon: Eye,
+    title: "相場がわかる、価格が透明",
+    desc: "市場相場データをあわせて提示。価格の根拠が見えるから、安心して判断できます。",
   },
   {
     icon: Gift,
-    title: "クーポン上乗せ",
-    desc: "レンタル事業者との提携で実質還元率アップ。",
-  },
-  {
-    icon: Crown,
-    title: "高級ドレス特化",
-    desc: "一般買取より圧倒的に精緻な評価基準。",
-  },
-  {
-    icon: ShieldCheck,
-    title: "セキュリティ",
-    desc: "個人情報は暗号化管理、HTTPS必須。",
+    title: "クーポン上乗せで高還元",
+    desc: "提携事業者が発行するクーポンを査定額に加算。実質還元率が競合より高くなります。",
   },
 ];
 
 export function WhyUs() {
   return (
-    <section className="py-20 sm:py-28 bg-secondary/40">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6">
+    <section className="py-24 sm:py-32 bg-background">
+      <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <div className="reveal max-w-2xl">
-          <p className="text-xs uppercase tracking-[0.2em] text-gold">Why urerun</p>
-          <h2 className="mt-3 text-2xl sm:text-4xl">選ばれる、7つの理由。</h2>
+          <p className="text-[11px] uppercase tracking-[0.25em] text-gold">Why urerun</p>
+          <h2 className="mt-4 font-serif text-3xl sm:text-5xl leading-tight">
+            選ばれる、5つの理由。
+          </h2>
         </div>
 
         <div className="mt-14 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {features.map((f, i) => (
             <div
               key={i}
-              className="reveal group rounded-2xl border border-border bg-background p-7 transition hover:border-gold/60 hover:shadow-lg hover:shadow-gold/5"
+              className="reveal group rounded-3xl border border-border bg-card p-8 transition hover:-translate-y-1 hover:border-gold/60 hover:shadow-xl hover:shadow-gold/10"
+              style={{ ["--reveal-delay" as never]: `${i * 90}ms` }}
             >
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gold/15">
+              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gold/15">
                 <f.icon className="h-6 w-6 text-gold" />
               </div>
-              <h3 className="mt-5 text-lg">{f.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+              <h3 className="mt-6 font-serif text-lg leading-snug">{f.title}</h3>
+              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
                 {f.desc}
               </p>
             </div>
