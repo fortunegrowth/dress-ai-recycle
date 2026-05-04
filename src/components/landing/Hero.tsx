@@ -33,7 +33,7 @@ export function Hero() {
   return (
     <section
       id="top"
-      className="relative h-[100svh] min-h-[640px] w-full overflow-hidden bg-primary text-primary-foreground"
+      className="relative isolate h-[100svh] min-h-[640px] w-full overflow-hidden bg-primary text-primary-foreground"
     >
       <div
         aria-hidden
