@@ -33,7 +33,7 @@ export function Hero() {
   return (
     <section
       id="top"
-      className="relative h-[100svh] min-h-[640px] w-full overflow-hidden text-white"
+      className="relative isolate h-[100svh] min-h-[640px] w-full overflow-hidden bg-primary text-primary-foreground"
     >
       <div
         aria-hidden
@@ -63,11 +63,11 @@ export function Hero() {
       <div className="relative z-10 mx-auto flex h-full max-w-6xl flex-col justify-center px-5 sm:px-8">
         <div className="reveal max-w-3xl">
           <div className="flex flex-wrap gap-2">
-            <span className="inline-flex items-center gap-1.5 rounded-full border border-gold/60 bg-black/20 px-3 py-1 text-[11px] font-medium backdrop-blur">
+            <span className="inline-flex items-center gap-1.5 rounded-full border border-gold/60 bg-primary/50 px-3 py-1 text-[11px] font-medium backdrop-blur">
               <Sparkles className="h-3.5 w-3.5 text-gold" />
               国内デザイナーズブランド特化
             </span>
-            <span className="inline-flex items-center rounded-full border border-white/30 bg-black/20 px-3 py-1 text-[11px] backdrop-blur">
+            <span className="inline-flex items-center rounded-full border border-primary-foreground/30 bg-primary/50 px-3 py-1 text-[11px] backdrop-blur">
               着用回数が少ないほど高価買取
             </span>
           </div>
@@ -78,7 +78,7 @@ export function Hero() {
             次の<span className="text-gold">誰か</span>へ。
           </h1>
 
-          <p className="mt-6 max-w-xl text-sm sm:text-lg leading-relaxed text-white/85">
+          <p className="mt-6 max-w-xl text-sm sm:text-lg leading-relaxed text-primary-foreground/90">
             AIが即時に相場を算出し、鑑定士が最終確認。
             <br className="hidden sm:block" />
             国内デザイナーズ特化だから、ブランドの価値を正しく評価します。
@@ -93,7 +93,7 @@ export function Hero() {
             </a>
             <a
               href="#how"
-              className="inline-flex items-center justify-center rounded-full border border-white/40 bg-white/10 px-7 py-4 text-sm font-medium text-white backdrop-blur transition hover:bg-white/20"
+              className="inline-flex items-center justify-center rounded-full border border-primary-foreground/40 bg-primary-foreground/10 px-7 py-4 text-sm font-medium text-primary-foreground backdrop-blur transition hover:bg-primary-foreground/20"
             >
               仕組みを見る
             </a>
@@ -104,7 +104,7 @@ export function Hero() {
       <a
         href="#problem"
         aria-label="次のセクションへ"
-        className="absolute bottom-6 left-1/2 z-10 -translate-x-1/2 text-white/70 hover:text-white transition"
+        className="absolute bottom-6 left-1/2 z-10 -translate-x-1/2 text-primary-foreground/70 transition hover:text-primary-foreground"
       >
         <ChevronDown className="h-6 w-6 animate-bounce" />
       </a>

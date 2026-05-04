@@ -7,7 +7,7 @@ export function CTASection() {
   return (
     <section
       id="cta"
-      className="relative overflow-hidden py-28 sm:py-36 text-white"
+      className="relative isolate overflow-hidden py-28 text-white sm:py-36"
     >
       <div
         aria-hidden
