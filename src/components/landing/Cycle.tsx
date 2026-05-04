@@ -15,13 +15,23 @@ export function Cycle() {
   const center = 220;
 
   return (
-    <section className="py-24 sm:py-32 relative overflow-hidden">
+    <section className="relative isolate py-24 sm:py-32 overflow-hidden">
+      <div aria-hidden className="absolute inset-0 -z-30" style={{ backgroundColor: "oklch(0.96 0.02 145)" }} />
+      <div
+        aria-hidden
+        className="absolute inset-0 -z-20 opacity-25"
+        style={{
+          backgroundImage: `url(https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?auto=format&fit=crop&w=1920&q=80)`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      />
       <div
         aria-hidden
         className="absolute inset-0 -z-10"
         style={{
           background:
-            "radial-gradient(ellipse at center, color-mix(in oklab, var(--sage) 14%, transparent), transparent 65%)",
+            "radial-gradient(ellipse at center, color-mix(in oklab, var(--sage) 18%, transparent), transparent 70%)",
         }}
       />
       <div className="mx-auto max-w-6xl px-5 sm:px-8">

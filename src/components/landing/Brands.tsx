@@ -2,6 +2,7 @@ const brands = [
   { en: "Mame Kurogouchi", jp: "マメクロゴウチ" },
   { en: "MURRAL", jp: "ミューラル" },
   { en: "YOKO CHAN", jp: "ヨーコチャン" },
+  { en: "sacai", jp: "サカイ" },
   { en: "FETICO", jp: "フェティコ" },
   { en: "HARUNOBUMURATA", jp: "ハルノブムラタ" },
   { en: "LOKITHO", jp: "ロキト" },
@@ -14,7 +15,17 @@ const brands = [
 
 export function Brands() {
   return (
-    <section className="py-24 sm:py-32 bg-secondary/50">
+    <section className="relative isolate py-24 sm:py-32 overflow-hidden">
+      <div aria-hidden className="absolute inset-0 -z-20" style={{ backgroundColor: "oklch(0.96 0.01 90)" }} />
+      <div
+        aria-hidden
+        className="absolute inset-0 -z-10 opacity-[0.08]"
+        style={{
+          backgroundImage: `url(https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?auto=format&fit=crop&w=1920&q=80)`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      />
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <div className="reveal text-center max-w-2xl mx-auto">
           <p className="text-[11px] uppercase tracking-[0.25em] text-gold">Brands</p>

@@ -28,9 +28,7 @@ export function Condition() {
         <div className="reveal max-w-2xl">
           <p className="text-[11px] uppercase tracking-[0.25em] text-gold">Condition</p>
           <h2 className="mt-4 font-serif text-3xl sm:text-5xl leading-tight">
-            着用回数が少ないほど、
-            <br />
-            状態が良いほど、査定額は上がります。
+            状態が良いほど、高く。
           </h2>
           <p className="mt-6 text-sm sm:text-base text-muted-foreground leading-relaxed">
             デザイナーズブランドのアイテムは、コンディションが価値に直結します。
