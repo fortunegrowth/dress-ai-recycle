@@ -47,6 +47,10 @@ export function Cycle() {
 
         <div className="reveal mt-16 flex justify-center">
           <div className="relative w-full max-w-[440px] aspect-square">
+            <div
+              aria-hidden
+              className="absolute inset-6 rounded-full bg-background/85 backdrop-blur-sm shadow-xl shadow-foreground/5 border border-border"
+            />
             <svg
               viewBox="0 0 440 440"
               className="absolute inset-0 w-full h-full"
@@ -58,8 +62,8 @@ export function Cycle() {
                 r={radius}
                 fill="none"
                 stroke="var(--gold)"
-                strokeOpacity="0.4"
-                strokeWidth="1.5"
+                strokeOpacity="0.95"
+                strokeWidth="2.5"
                 className="dash-flow"
               />
             </svg>
