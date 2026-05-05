@@ -39,11 +39,11 @@ export function WhyUs() {
           </h2>
         </div>
 
-        <div className="mt-14 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-14 flex flex-wrap justify-center gap-5">
           {features.map((f, i) => (
             <div
               key={i}
-              className="reveal group rounded-3xl border border-border bg-card p-8 transition hover:-translate-y-1 hover:border-gold/60 hover:shadow-xl hover:shadow-gold/10"
+              className="reveal group w-full sm:w-[calc(50%-0.625rem)] lg:w-[calc(33.333%-0.834rem)] rounded-3xl border border-border bg-card p-8 transition hover:-translate-y-1 hover:border-gold/60 hover:shadow-xl hover:shadow-gold/10"
               style={{ ["--reveal-delay" as never]: `${i * 90}ms` }}
             >
               <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gold/15">
