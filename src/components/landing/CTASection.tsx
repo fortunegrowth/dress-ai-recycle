@@ -45,7 +45,7 @@ export function CTASection() {
             申し込む。
           </h2>
           <p className="mt-6 text-sm sm:text-base text-white/85 leading-relaxed">
-            会員登録のうえ、写真を送るだけで30秒以内に査定額をお届けします。
+            写真を送るだけで <span className="font-medium text-gold">30秒</span> で査定額をお届け。従来 7日 → 30秒 へ。
             <br className="hidden sm:block" />
             登録・査定は完全無料。手放す決断は、結果を見てからで大丈夫です。
           </p>
