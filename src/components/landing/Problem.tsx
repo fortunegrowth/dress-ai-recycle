@@ -51,7 +51,7 @@ export function Problem() {
               <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gold/15">
                 <Icon className="h-6 w-6 text-gold" />
               </div>
-              <h3 className="mt-6 font-serif text-lg leading-snug">{title}</h3>
+              <h3 className="mt-6 font-serif text-lg leading-snug whitespace-pre-line">{title}</h3>
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
                 {text}
               </p>
