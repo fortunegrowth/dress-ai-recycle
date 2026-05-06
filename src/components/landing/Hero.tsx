@@ -68,7 +68,7 @@ export function Hero() {
               </span>
             </div>
 
-            <h1 className="mt-3 sm:mt-6 font-serif text-[1.15rem] leading-[1.3] sm:text-6xl sm:leading-[1.2] text-balance whitespace-nowrap sm:whitespace-normal">
+            <h1 className="mt-3 sm:mt-6 font-serif text-[1rem] leading-[1.35] sm:text-6xl sm:leading-[1.2] text-balance whitespace-nowrap sm:whitespace-normal">
               売るかどうか、<br />
               <span className="text-gold">今日中</span>に決められる。
             </h1>
