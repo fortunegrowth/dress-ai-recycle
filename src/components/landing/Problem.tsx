@@ -3,7 +3,7 @@ import { Gem, PackageX, HeartCrack } from "lucide-react";
 const items = [
   {
     icon: Gem,
-    title: "デザイナーズの価値、わかってもらえない",
+    title: "デザイナーズの価値、\nわかってもらえない",
     text: "数日待って査定されるのに、思ったより低い価格。デザイナーズの価値をちゃんと評価してもらえた気がしない。",
   },
   {
@@ -13,7 +13,7 @@ const items = [
   },
   {
     icon: HeartCrack,
-    title: "高かったのに、安く手放すのは嫌だ",
+    title: "高かったのに、\n安く手放すのは嫌だ",
     text: "新しいシーズンの服も欲しい。でも手元の服は可愛いし、状態もいい。ブランドの価値をわかってくれる場所で、納得できる価格で売りたい。",
   },
 ];
@@ -51,7 +51,7 @@ export function Problem() {
               <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gold/15">
                 <Icon className="h-6 w-6 text-gold" />
               </div>
-              <h3 className="mt-6 font-serif text-lg leading-snug">{title}</h3>
+              <h3 className="mt-6 font-serif text-lg leading-snug whitespace-pre-line">{title}</h3>
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
                 {text}
               </p>
@@ -61,6 +61,7 @@ export function Problem() {
 
         <p className="reveal mt-12 text-sm text-muted-foreground max-w-3xl">
           ファッションが好きな方も、ファッションに携わるなかで手元にアイテムが増えてしまう方も。
+          <br />
           urerunは「ブランドの価値を理解してくれる買取先」を探しているすべての方のために。
         </p>
       </div>
