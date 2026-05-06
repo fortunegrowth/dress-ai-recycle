@@ -128,7 +128,9 @@ export function Solution() {
         </div>
 
         <p className="reveal mt-6 text-center text-xs text-muted-foreground">
-          ※ 発送・鑑定の時間は変わりませんが、<span className="font-medium text-foreground">「売るか決める判断」が圧倒的に早く</span> できます。
+          ※ 発送・鑑定の時間は変わりませんが、
+          <br />
+          <span className="font-medium text-foreground">「売るか決める判断」が圧倒的に早く</span> できます。
         </p>
 
         {/* Desktop: horizontal stepper */}
