@@ -29,7 +29,7 @@ export function Hero() {
   return (
     <section
       id="top"
-      className="relative isolate min-h-[60svh] sm:min-h-[100svh] w-full overflow-hidden bg-primary text-primary-foreground"
+      className="relative isolate min-h-[72svh] sm:min-h-[100svh] w-full overflow-hidden bg-primary text-primary-foreground"
     >
       <div
         aria-hidden
@@ -56,7 +56,7 @@ export function Hero() {
         }}
       />
 
-      <div className="relative z-10 mx-auto flex min-h-[60svh] sm:min-h-[100svh] max-w-6xl flex-col justify-center px-5 py-6 sm:py-24 sm:px-8">
+      <div className="relative z-10 mx-auto flex min-h-[72svh] sm:min-h-[100svh] max-w-6xl flex-col justify-center px-5 py-9 sm:py-24 sm:px-8">
         <div className="grid grid-cols-[1.5fr_1fr] items-center gap-3 sm:gap-8 lg:grid-cols-[1.1fr_1fr] lg:gap-10">
           <div className="min-w-0">
             <div className="flex flex-col items-start gap-1.5 sm:flex-row sm:flex-wrap sm:gap-2">
