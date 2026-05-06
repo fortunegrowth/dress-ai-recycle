@@ -38,7 +38,9 @@ export function Solution() {
         <div className="reveal max-w-2xl">
           <p className="text-[11px] uppercase tracking-[0.25em] text-gold">How it works</p>
           <h2 className="mt-4 font-serif text-3xl sm:text-5xl leading-tight">
-            査定額がわかるのは、たった30秒。
+            査定額がわかるのは、
+            <br />
+            たった30秒。
           </h2>
           <p className="mt-5 text-sm sm:text-base text-muted-foreground">
             写真を送るだけ。従来 <span className="font-medium text-foreground">7日</span> かかっていた査定が、AIで <span className="font-medium text-gold">30秒</span> に短縮されます。
