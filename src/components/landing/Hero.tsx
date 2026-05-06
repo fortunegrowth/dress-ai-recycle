@@ -56,8 +56,8 @@ export function Hero() {
       />
 
       <div className="relative z-10 mx-auto flex min-h-[100svh] max-w-6xl flex-col justify-center px-5 py-24 sm:px-8">
-        <div className="grid grid-cols-[1.3fr_1fr] items-center gap-4 sm:gap-8 lg:grid-cols-[1.1fr_1fr] lg:gap-10">
-          <div className="reveal">
+        <div className="grid grid-cols-[1.25fr_1fr] items-center gap-3 sm:gap-8 lg:grid-cols-[1.1fr_1fr] lg:gap-10">
+          <div>
             <div className="flex flex-wrap gap-1.5 sm:gap-2">
               <span className="inline-flex items-center gap-1 sm:gap-1.5 rounded-full border border-gold/60 bg-primary/50 px-2 sm:px-3 py-0.5 sm:py-1 text-[10px] sm:text-[11px] font-medium backdrop-blur">
                 <Sparkles className="h-3 w-3 sm:h-3.5 sm:w-3.5 text-gold" />
