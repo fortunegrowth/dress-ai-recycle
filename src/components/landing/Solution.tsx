@@ -6,6 +6,9 @@ import {
   ShieldCheck,
   Wallet,
   ArrowRight,
+  ArrowDown,
+  Clock,
+  Zap,
 } from "lucide-react";
 
 const steps = [
@@ -42,92 +45,91 @@ export function Solution() {
           </p>
         </div>
 
-        {/* Comparison: 従来 vs urerun */}
-        <div className="reveal mt-12 rounded-3xl border border-border bg-background/80 p-5 sm:p-8 backdrop-blur">
-          <div className="space-y-6">
-            {/* 従来 */}
-            <div>
-              <div className="flex items-baseline justify-between gap-3">
-                <div className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">
-                  従来の買取
-                </div>
-                <div className="text-xs text-muted-foreground">
-                  査定額がわかるまで <span className="font-serif text-base text-foreground">約7日</span>
-                </div>
+        {/* Comparison: 従来 vs urerun – clearer side-by-side cards */}
+        <div className="reveal mt-12 grid grid-cols-1 gap-4 md:grid-cols-2">
+          {/* 従来 */}
+          <div className="rounded-3xl border border-border bg-background/80 p-6 sm:p-8 backdrop-blur">
+            <div className="flex items-center justify-between">
+              <div className="inline-flex items-center gap-2 rounded-full border border-border bg-secondary px-3 py-1 text-[11px] font-semibold uppercase tracking-widest text-muted-foreground">
+                <Clock className="h-3.5 w-3.5" />
+                従来の買取
               </div>
-              <div className="mt-3 relative">
-                <div className="flex h-9 overflow-hidden rounded-full border border-border bg-secondary text-[10px] sm:text-xs">
-                  <div className="flex items-center justify-center px-3 text-muted-foreground" style={{ width: "12%" }}>
-                    申込
-                  </div>
-                  <div className="flex items-center justify-center border-l border-border px-3 text-muted-foreground" style={{ width: "30%" }}>
-                    発送・到着
-                  </div>
-                  <div className="flex items-center justify-center border-l border-border bg-muted px-3 font-medium text-foreground" style={{ width: "33%" }}>
-                    鑑定士が査定
-                  </div>
-                  <div className="flex items-center justify-center border-l border-border px-3 text-muted-foreground" style={{ width: "25%" }}>
-                    結果連絡・入金
-                  </div>
-                </div>
-                <div
-                  aria-hidden
-                  className="pointer-events-none absolute -top-1 h-11 border-l-2 border-dashed border-foreground/40"
-                  style={{ left: "75%" }}
-                />
-                <div
-                  className="absolute -top-7 -translate-x-1/2 whitespace-nowrap rounded-full bg-foreground px-2.5 py-0.5 text-[10px] font-medium text-background"
-                  style={{ left: "75%" }}
-                >
-                  ↓ 査定額がわかる（約7日後）
-                </div>
+              <div className="text-right">
+                <div className="text-[10px] uppercase tracking-widest text-muted-foreground">査定額がわかるまで</div>
+                <div className="font-serif text-2xl text-foreground">約7日</div>
               </div>
             </div>
 
-            {/* urerun */}
-            <div>
-              <div className="flex items-baseline justify-between gap-3">
-                <div className="text-xs font-semibold uppercase tracking-widest text-gold">
-                  urerun
-                </div>
-                <div className="text-xs text-muted-foreground">
-                  査定額がわかるまで <span className="font-serif text-base text-gold">30秒</span>
-                </div>
-              </div>
-              <div className="mt-3 relative">
-                <div className="flex h-9 overflow-hidden rounded-full border border-gold/40 bg-gold/5 text-[10px] sm:text-xs">
-                  <div className="flex items-center justify-center bg-gold/20 px-3 font-medium text-foreground" style={{ width: "8%" }}>
-                    AI
+            <ol className="mt-6 space-y-3">
+              {[
+                { label: "申込", time: "当日" },
+                { label: "発送・到着", time: "1〜2日" },
+                { label: "鑑定士が査定", time: "3〜5日", highlight: true },
+                { label: "結果連絡・入金", time: "1〜2日", milestone: "← 査定額がわかる" },
+              ].map((row, i) => (
+                <li key={i} className="flex items-center gap-3">
+                  <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-border bg-background text-xs font-medium text-muted-foreground">
+                    {i + 1}
                   </div>
-                  <div className="flex items-center justify-center border-l border-gold/30 px-3 text-muted-foreground" style={{ width: "30%" }}>
-                    発送・到着
+                  <div className={`flex-1 rounded-xl border px-3 py-2 text-sm ${row.highlight ? "border-foreground/20 bg-muted font-medium" : "border-border bg-secondary/50"}`}>
+                    <div className="flex items-center justify-between gap-2">
+                      <span>{row.label}</span>
+                      <span className="text-xs text-muted-foreground">{row.time}</span>
+                    </div>
+                    {row.milestone && (
+                      <div className="mt-1 text-[11px] font-medium text-foreground">{row.milestone}</div>
+                    )}
                   </div>
-                  <div className="flex items-center justify-center border-l border-gold/30 px-3 text-muted-foreground" style={{ width: "32%" }}>
-                    鑑定士が最終確認
-                  </div>
-                  <div className="flex items-center justify-center border-l border-gold/30 px-3 text-muted-foreground" style={{ width: "30%" }}>
-                    入金（最短当日）
-                  </div>
-                </div>
-                <div
-                  aria-hidden
-                  className="pointer-events-none absolute -top-1 h-11 border-l-2 border-dashed border-gold"
-                  style={{ left: "8%" }}
-                />
-                <div
-                  className="absolute -top-7 -translate-x-1/2 whitespace-nowrap rounded-full bg-gold px-2.5 py-0.5 text-[10px] font-medium text-gold-foreground"
-                  style={{ left: "8%" }}
-                >
-                  ↓ 査定額がわかる（30秒）
-                </div>
-              </div>
-            </div>
+                </li>
+              ))}
+            </ol>
           </div>
 
-          <p className="mt-8 text-center text-xs text-muted-foreground">
-            ※ 帯の長さは所要時間のイメージです。発送・鑑定の時間は変わりませんが、<span className="font-medium text-foreground">「売るか決める判断」が圧倒的に早く</span> できます。
-          </p>
+          {/* urerun */}
+          <div className="relative rounded-3xl border-2 border-gold/50 bg-background p-6 sm:p-8 shadow-lg shadow-gold/10">
+            <div className="absolute -top-3 right-6 rounded-full bg-gold px-3 py-1 text-[10px] font-semibold uppercase tracking-widest text-gold-foreground">
+              urerunなら
+            </div>
+            <div className="flex items-center justify-between">
+              <div className="inline-flex items-center gap-2 rounded-full bg-gold/15 px-3 py-1 text-[11px] font-semibold uppercase tracking-widest text-gold">
+                <Zap className="h-3.5 w-3.5" />
+                AI査定
+              </div>
+              <div className="text-right">
+                <div className="text-[10px] uppercase tracking-widest text-gold">査定額がわかるまで</div>
+                <div className="font-serif text-2xl text-gold">30秒</div>
+              </div>
+            </div>
+
+            <ol className="mt-6 space-y-3">
+              {[
+                { label: "AIが査定", time: "30秒", highlight: true, milestone: "← 査定額がわかる" },
+                { label: "発送・到着", time: "1〜2日" },
+                { label: "鑑定士が最終確認", time: "1〜2日" },
+                { label: "入金", time: "最短当日" },
+              ].map((row, i) => (
+                <li key={i} className="flex items-center gap-3">
+                  <div className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-xs font-medium ${row.highlight ? "bg-gold text-gold-foreground" : "border border-gold/30 bg-background text-gold"}`}>
+                    {i + 1}
+                  </div>
+                  <div className={`flex-1 rounded-xl border px-3 py-2 text-sm ${row.highlight ? "border-gold/50 bg-gold/10 font-medium" : "border-gold/20 bg-gold/5"}`}>
+                    <div className="flex items-center justify-between gap-2">
+                      <span>{row.label}</span>
+                      <span className={`text-xs ${row.highlight ? "text-gold" : "text-muted-foreground"}`}>{row.time}</span>
+                    </div>
+                    {row.milestone && (
+                      <div className="mt-1 text-[11px] font-medium text-gold">{row.milestone}</div>
+                    )}
+                  </div>
+                </li>
+              ))}
+            </ol>
+          </div>
         </div>
+
+        <p className="reveal mt-6 text-center text-xs text-muted-foreground">
+          ※ 発送・鑑定の時間は変わりませんが、<span className="font-medium text-foreground">「売るか決める判断」が圧倒的に早く</span> できます。
+        </p>
 
         {/* Desktop: horizontal stepper */}
         <div className="reveal mt-16 hidden lg:block">
@@ -163,35 +165,50 @@ export function Solution() {
           </div>
         </div>
 
-        {/* Mobile/Tablet: 2-column compact grid */}
-        <div className="mt-12 grid grid-cols-2 gap-3 lg:hidden">
-          {steps.map((s, i) => {
-            const Icon = s.icon;
-            const ring =
-              s.accent === "ai"
-                ? "border-gold/60 bg-gold/10 text-gold"
-                : s.accent === "human"
-                  ? "border-primary/40 bg-primary/10 text-primary"
-                  : "border-border bg-background text-foreground";
-            return (
-              <div
-                key={i}
-                className="reveal rounded-2xl border border-border bg-background p-4"
-                style={{ ["--reveal-delay" as never]: `${i * 80}ms` }}
-              >
-                <div className="flex items-center gap-3">
-                  <div className={`flex h-10 w-10 items-center justify-center rounded-full border-2 ${ring}`}>
-                    <Icon className="h-5 w-5" />
-                  </div>
-                  <div className="text-[10px] font-semibold uppercase tracking-widest text-gold">
-                    Step 0{i + 1}
+        {/* Mobile/Tablet: vertical flow */}
+        <div className="mt-12 lg:hidden">
+          <div className="relative mx-auto max-w-md">
+            {steps.map((s, i) => {
+              const Icon = s.icon;
+              const ring =
+                s.accent === "ai"
+                  ? "border-gold/60 bg-gold/10 text-gold"
+                  : s.accent === "human"
+                    ? "border-primary/40 bg-primary/10 text-primary"
+                    : "border-border bg-background text-foreground";
+              const isLast = i === steps.length - 1;
+              return (
+                <div key={i} className="reveal" style={{ ["--reveal-delay" as never]: `${i * 60}ms` }}>
+                  <div className="flex items-start gap-4">
+                    <div className="flex flex-col items-center">
+                      <div className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-full border-2 ${ring} bg-background shadow-sm`}>
+                        <Icon className="h-5 w-5" />
+                      </div>
+                      {!isLast && (
+                        <div aria-hidden className="my-1 h-8 w-px bg-gradient-to-b from-border to-transparent" />
+                      )}
+                    </div>
+                    <div className="flex-1 pb-2 pt-1">
+                      <div className="text-[10px] font-semibold uppercase tracking-widest text-gold">
+                        Step {String(i + 1).padStart(2, "0")}
+                      </div>
+                      <div className="mt-0.5 font-serif text-base leading-snug">{s.title}</div>
+                      <div className="mt-0.5 text-xs text-muted-foreground">{s.sub}</div>
+                    </div>
+                    {!isLast && (
+                      <ArrowDown className="mt-3 h-4 w-4 shrink-0 text-muted-foreground/40" />
+                    )}
                   </div>
                 </div>
-                <div className="mt-3 font-serif text-sm leading-snug">{s.title}</div>
-                <div className="mt-1 text-xs text-muted-foreground">{s.sub}</div>
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
+
+          <div className="mt-8 flex justify-center">
+            <p className="rounded-full border border-dashed border-gold/50 bg-gold/5 px-4 py-2 text-[11px] text-foreground/80">
+              💡 <span className="font-medium text-gold">AI</span> × <span className="font-medium text-primary">鑑定士</span> の二段構え
+            </p>
+          </div>
         </div>
 
         <div className="reveal mt-12 text-center">
