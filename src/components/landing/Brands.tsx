@@ -33,7 +33,9 @@ export function Brands() {
             買取特化ブランド
           </h2>
           <p className="mt-5 text-sm sm:text-base text-muted-foreground">
-            国内デザイナーズブランドを中心に、価値を正しく評価します。
+            国内デザイナーズブランドを中心に、
+            <br />
+            価値を正しく評価します。
           </p>
         </div>
 
