@@ -41,7 +41,9 @@ export function Cycle() {
             価値が、巡り続ける。
           </h2>
           <p className="mt-5 text-sm sm:text-base text-muted-foreground">
-            手放されたアイテムは次の誰かの元へ。urerunは循環するエコシステムを設計しています。
+            手放されたアイテムは次の誰かの元へ。
+            <br />
+            urerunは循環するエコシステムを設計しています。
           </p>
         </div>
 
