@@ -1,30 +1,10 @@
-import { useEffect, useRef } from "react";
 import { Sparkles, ChevronDown, Camera, CheckCircle2 } from "lucide-react";
 import heroDress from "@/assets/hero-dress.png";
 
 const HERO_BG =
-  "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1920&q=80";
+  "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1280&q=70";
 
 export function Hero() {
-  const bgRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    let raf = 0;
-    const onScroll = () => {
-      cancelAnimationFrame(raf);
-      raf = requestAnimationFrame(() => {
-        if (!bgRef.current) return;
-        const y = window.scrollY * 0.35;
-        bgRef.current.style.transform = `translate3d(0, ${y}px, 0) scale(1.08)`;
-      });
-    };
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => {
-      window.removeEventListener("scroll", onScroll);
-      cancelAnimationFrame(raf);
-    };
-  }, []);
 
   return (
     <section
@@ -37,9 +17,8 @@ export function Hero() {
         style={{ backgroundColor: "oklch(0.18 0.02 260)" }}
       />
       <div
-        ref={bgRef}
         aria-hidden
-        className="absolute inset-0 -z-20 will-change-transform"
+        className="absolute inset-0 -z-20"
         style={{
           backgroundImage: `url(${HERO_BG})`,
           backgroundSize: "cover",
