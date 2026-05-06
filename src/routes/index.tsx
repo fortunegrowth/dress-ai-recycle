@@ -22,10 +22,14 @@ function MidCTA() {
     <section className="bg-background py-14">
       <div className="reveal mx-auto max-w-3xl px-5 sm:px-8 text-center">
         <p className="font-serif text-xl sm:text-2xl">
-          査定額がわかるのは、たった<span className="text-gold">30秒</span>。
+          査定額がわかるのは、
+          <br />
+          たった<span className="text-gold">30秒</span>。
         </p>
         <p className="mt-2 text-sm text-muted-foreground">
-          会員登録は1分。手放すかどうかは、価格を見てから決められます。
+          会員登録は1分。
+          <br />
+          手放すかどうかは、価格を見てから決められます。
         </p>
         <a
           href="#cta"
