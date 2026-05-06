@@ -61,6 +61,7 @@ export function Problem() {
 
         <p className="reveal mt-12 text-sm text-muted-foreground max-w-3xl">
           ファッションが好きな方も、ファッションに携わるなかで手元にアイテムが増えてしまう方も。
+          <br />
           urerunは「ブランドの価値を理解してくれる買取先」を探しているすべての方のために。
         </p>
       </div>
