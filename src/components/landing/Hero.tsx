@@ -95,8 +95,10 @@ export function Hero() {
             </div>
           </div>
 
-          <div className="reveal flex justify-center lg:justify-end" style={{ ["--reveal-delay" as never]: "200ms" }}>
-            <PhoneMockup />
+          <div className="flex justify-center lg:justify-end">
+            <div className="origin-center scale-[0.55] sm:scale-100 -my-16 sm:my-0">
+              <PhoneMockup />
+            </div>
           </div>
         </div>
       </div>
