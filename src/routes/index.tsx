@@ -12,6 +12,7 @@ import { Cycle } from "@/components/landing/Cycle";
 import { FAQ } from "@/components/landing/FAQ";
 import { CTASection } from "@/components/landing/CTASection";
 import { Footer } from "@/components/landing/Footer";
+import { StickyCTA } from "@/components/landing/StickyCTA";
 
 export const Route = createFileRoute("/")({
   component: Index,
