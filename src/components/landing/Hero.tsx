@@ -17,9 +17,8 @@ export function Hero() {
         style={{ backgroundColor: "oklch(0.18 0.02 260)" }}
       />
       <div
-        ref={bgRef}
         aria-hidden
-        className="absolute inset-0 -z-20 will-change-transform"
+        className="absolute inset-0 -z-20"
         style={{
           backgroundImage: `url(${HERO_BG})`,
           backgroundSize: "cover",
