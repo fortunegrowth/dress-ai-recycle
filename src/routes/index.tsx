@@ -54,7 +54,9 @@ function FAQIntro() {
           迷っている方へ。
         </h2>
         <p className="mt-3 text-sm text-muted-foreground">
-          査定だけのご利用も完全無料。価格を見てから、ゆっくり決めてください。
+          査定だけのご利用も完全無料。
+          <br />
+          価格を見てから、ゆっくり決めてください。
         </p>
       </div>
     </section>
