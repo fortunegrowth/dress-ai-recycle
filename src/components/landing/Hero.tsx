@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import { Sparkles, ChevronDown, Camera, CheckCircle2 } from "lucide-react";
+import heroDress from "@/assets/hero-dress.png";
 
 const HERO_BG =
   "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1920&q=80";
@@ -133,7 +134,7 @@ function PhoneMockup() {
             {/* image area */}
             <div className="relative aspect-[4/5] overflow-hidden rounded-lg sm:rounded-2xl bg-muted">
               <img
-                src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&w=600&q=80"
+                src={heroDress}
                 alt="査定中のアイテム"
                 className="h-full w-full object-cover"
               />
@@ -145,18 +146,18 @@ function PhoneMockup() {
 
             <div className="mt-2 sm:mt-4">
               <p className="text-[7px] sm:text-[10px] uppercase tracking-widest text-muted-foreground">Brand</p>
-              <p className="font-serif text-[10px] sm:text-base leading-tight">sacai / Wool Coat</p>
+              <p className="font-serif text-[10px] sm:text-base leading-tight">Mame Kurogouchi / Dress</p>
             </div>
 
             <div className="mt-2 sm:mt-4 rounded-lg sm:rounded-2xl border border-gold/40 bg-gold/5 p-2 sm:p-4">
               <p className="text-[7px] sm:text-[10px] uppercase tracking-widest text-gold">査定結果</p>
               <div className="mt-0.5 sm:mt-1 flex items-baseline gap-1 flex-wrap">
-                <span className="font-serif text-base sm:text-3xl font-medium">¥48,200</span>
+                <span className="font-serif text-base sm:text-3xl font-medium">¥66,000</span>
                 <span className="text-[7px] sm:text-xs text-muted-foreground">+ ¥2,000</span>
               </div>
               <div className="mt-1 sm:mt-2 flex items-center gap-0.5 sm:gap-1 text-[7px] sm:text-[10px] text-muted-foreground">
                 <CheckCircle2 className="h-2 w-2 sm:h-3 sm:w-3 text-gold" />
-                相場：¥42k – ¥52k
+                相場：¥50,000〜¥66,000
               </div>
             </div>
 
