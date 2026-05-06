@@ -1,10 +1,5 @@
 import { useEffect, useRef } from "react";
-import { Sparkles, ChevronDown } from "lucide-react";
-
-// ABテスト候補（採用：案D）
-// 案A：手放す、もっとかしこく。AIが30秒で適正価格を提示します。
-// 案B：買取価格、もう曖昧にしない。相場も、根拠も、ぜんぶ見せます。
-// 案C：着ていない服を、次の新作へ変えよう。
+import { Sparkles, ChevronDown, Camera, CheckCircle2 } from "lucide-react";
 
 const HERO_BG =
   "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1920&q=80";
@@ -33,7 +28,7 @@ export function Hero() {
   return (
     <section
       id="top"
-      className="relative isolate h-[100svh] min-h-[640px] w-full overflow-hidden bg-primary text-primary-foreground"
+      className="relative isolate min-h-[100svh] w-full overflow-hidden bg-primary text-primary-foreground"
     >
       <div
         aria-hidden
@@ -60,43 +55,49 @@ export function Hero() {
         }}
       />
 
-      <div className="relative z-10 mx-auto flex h-full max-w-6xl flex-col justify-center px-5 sm:px-8">
-        <div className="reveal max-w-3xl">
-          <div className="flex flex-wrap gap-2">
-            <span className="inline-flex items-center gap-1.5 rounded-full border border-gold/60 bg-primary/50 px-3 py-1 text-[11px] font-medium backdrop-blur">
-              <Sparkles className="h-3.5 w-3.5 text-gold" />
-              国内デザイナーズブランド特化
-            </span>
-            <span className="inline-flex items-center rounded-full border border-primary-foreground/30 bg-primary/50 px-3 py-1 text-[11px] backdrop-blur">
-              着用回数が少ないほど高価買取
-            </span>
+      <div className="relative z-10 mx-auto flex min-h-[100svh] max-w-6xl flex-col justify-center px-5 py-24 sm:px-8">
+        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[1.1fr_1fr] lg:gap-10">
+          <div className="reveal">
+            <div className="flex flex-wrap gap-2">
+              <span className="inline-flex items-center gap-1.5 rounded-full border border-gold/60 bg-primary/50 px-3 py-1 text-[11px] font-medium backdrop-blur">
+                <Sparkles className="h-3.5 w-3.5 text-gold" />
+                国内デザイナーズブランド特化
+              </span>
+              <span className="inline-flex items-center rounded-full border border-primary-foreground/30 bg-primary/50 px-3 py-1 text-[11px] backdrop-blur">
+                着用回数が少ないほど高価買取
+              </span>
+            </div>
+
+            <h1 className="mt-7 font-serif text-[2.2rem] leading-[1.3] sm:text-6xl sm:leading-[1.2] text-balance">
+              あなたのクローゼットから、
+              <br className="hidden sm:block" />
+              次の<span className="text-gold">誰か</span>へ。
+            </h1>
+
+            <p className="mt-6 max-w-xl text-sm sm:text-lg leading-relaxed text-primary-foreground/90">
+              AIが即時に相場を算出し、鑑定士が最終確認。
+              <br className="hidden sm:block" />
+              国内デザイナーズ特化だから、ブランドの価値を正しく評価します。
+            </p>
+
+            <div className="mt-9 flex flex-col sm:flex-row gap-3">
+              <a
+                href="#cta"
+                className="inline-flex items-center justify-center rounded-full bg-gold px-7 py-4 text-sm font-medium text-gold-foreground shadow-xl shadow-black/30 transition hover:opacity-90"
+              >
+                無料で査定を申し込む
+              </a>
+              <a
+                href="#how"
+                className="inline-flex items-center justify-center rounded-full border border-primary-foreground/40 bg-primary-foreground/10 px-7 py-4 text-sm font-medium text-primary-foreground backdrop-blur transition hover:bg-primary-foreground/20"
+              >
+                仕組みを見る
+              </a>
+            </div>
           </div>
 
-          <h1 className="mt-7 font-serif text-[2.2rem] leading-[1.3] sm:text-6xl sm:leading-[1.2] text-balance">
-            あなたのクローゼットから、
-            <br className="hidden sm:block" />
-            次の<span className="text-gold">誰か</span>へ。
-          </h1>
-
-          <p className="mt-6 max-w-xl text-sm sm:text-lg leading-relaxed text-primary-foreground/90">
-            AIが即時に相場を算出し、鑑定士が最終確認。
-            <br className="hidden sm:block" />
-            国内デザイナーズ特化だから、ブランドの価値を正しく評価します。
-          </p>
-
-          <div className="mt-9 flex flex-col sm:flex-row gap-3">
-            <a
-              href="#cta"
-              className="inline-flex items-center justify-center rounded-full bg-gold px-7 py-4 text-sm font-medium text-gold-foreground shadow-xl shadow-black/30 transition hover:opacity-90"
-            >
-              無料で査定を申し込む
-            </a>
-            <a
-              href="#how"
-              className="inline-flex items-center justify-center rounded-full border border-primary-foreground/40 bg-primary-foreground/10 px-7 py-4 text-sm font-medium text-primary-foreground backdrop-blur transition hover:bg-primary-foreground/20"
-            >
-              仕組みを見る
-            </a>
+          <div className="reveal flex justify-center lg:justify-end" style={{ ["--reveal-delay" as never]: "200ms" }}>
+            <PhoneMockup />
           </div>
         </div>
       </div>
@@ -109,5 +110,63 @@ export function Hero() {
         <ChevronDown className="h-6 w-6 animate-bounce" />
       </a>
     </section>
+  );
+}
+
+function PhoneMockup() {
+  return (
+    <div className="relative">
+      <div
+        aria-hidden
+        className="absolute -inset-8 rounded-[3rem] bg-gold/20 blur-3xl"
+      />
+      <div className="relative w-[280px] sm:w-[320px] rounded-[2.5rem] border-[10px] border-neutral-900 bg-neutral-900 shadow-2xl shadow-black/60">
+        {/* notch */}
+        <div className="absolute left-1/2 top-0 z-20 h-5 w-24 -translate-x-1/2 rounded-b-2xl bg-neutral-900" />
+        <div className="overflow-hidden rounded-[1.9rem] bg-background text-foreground">
+          {/* status bar */}
+          <div className="flex items-center justify-between px-5 pt-4 pb-2 text-[10px] text-foreground/70">
+            <span>9:41</span>
+            <span>urerun</span>
+          </div>
+
+          <div className="px-5 pb-6">
+            {/* image area */}
+            <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-muted">
+              <img
+                src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&w=600&q=80"
+                alt="査定中のアイテム"
+                className="h-full w-full object-cover"
+              />
+              <div className="absolute left-3 top-3 inline-flex items-center gap-1 rounded-full bg-background/90 px-2 py-1 text-[10px] font-medium backdrop-blur">
+                <Camera className="h-3 w-3 text-gold" />
+                AI解析中
+              </div>
+            </div>
+
+            <div className="mt-4">
+              <p className="text-[10px] uppercase tracking-widest text-muted-foreground">Brand</p>
+              <p className="font-serif text-base leading-tight">sacai / Wool Coat</p>
+            </div>
+
+            <div className="mt-4 rounded-2xl border border-gold/40 bg-gold/5 p-4">
+              <p className="text-[10px] uppercase tracking-widest text-gold">査定結果</p>
+              <div className="mt-1 flex items-baseline gap-1">
+                <span className="font-serif text-3xl font-medium">¥48,200</span>
+                <span className="text-xs text-muted-foreground">+ クーポン ¥2,000</span>
+              </div>
+              <div className="mt-2 flex items-center gap-1 text-[10px] text-muted-foreground">
+                <CheckCircle2 className="h-3 w-3 text-gold" />
+                相場：¥42,000 – ¥52,000
+              </div>
+            </div>
+
+            <button className="mt-4 w-full rounded-full bg-foreground py-3 text-xs font-medium text-background">
+              この価格で承諾する
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }
