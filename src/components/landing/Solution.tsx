@@ -35,10 +35,97 @@ export function Solution() {
         <div className="reveal max-w-2xl">
           <p className="text-[11px] uppercase tracking-[0.25em] text-gold">How it works</p>
           <h2 className="mt-4 font-serif text-3xl sm:text-5xl leading-tight">
-            6ステップで、入金まで完結。
+            査定額がわかるのは、たった30秒。
           </h2>
           <p className="mt-5 text-sm sm:text-base text-muted-foreground">
-            写真を送るだけ。従来 <span className="font-medium text-foreground">7日</span> の査定が、AIで <span className="font-medium text-gold">30秒</span> に。
+            写真を送るだけ。従来 <span className="font-medium text-foreground">7日</span> かかっていた査定が、AIで <span className="font-medium text-gold">30秒</span> に短縮されます。
+          </p>
+        </div>
+
+        {/* Comparison: 従来 vs urerun */}
+        <div className="reveal mt-12 rounded-3xl border border-border bg-background/80 p-5 sm:p-8 backdrop-blur">
+          <div className="space-y-6">
+            {/* 従来 */}
+            <div>
+              <div className="flex items-baseline justify-between gap-3">
+                <div className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">
+                  従来の買取
+                </div>
+                <div className="text-xs text-muted-foreground">
+                  査定額がわかるまで <span className="font-serif text-base text-foreground">約7日</span>
+                </div>
+              </div>
+              <div className="mt-3 relative">
+                <div className="flex h-9 overflow-hidden rounded-full border border-border bg-secondary text-[10px] sm:text-xs">
+                  <div className="flex items-center justify-center px-3 text-muted-foreground" style={{ width: "12%" }}>
+                    申込
+                  </div>
+                  <div className="flex items-center justify-center border-l border-border px-3 text-muted-foreground" style={{ width: "30%" }}>
+                    発送・到着
+                  </div>
+                  <div className="flex items-center justify-center border-l border-border bg-muted px-3 font-medium text-foreground" style={{ width: "33%" }}>
+                    鑑定士が査定
+                  </div>
+                  <div className="flex items-center justify-center border-l border-border px-3 text-muted-foreground" style={{ width: "25%" }}>
+                    結果連絡・入金
+                  </div>
+                </div>
+                <div
+                  aria-hidden
+                  className="pointer-events-none absolute -top-1 h-11 border-l-2 border-dashed border-foreground/40"
+                  style={{ left: "75%" }}
+                />
+                <div
+                  className="absolute -top-7 -translate-x-1/2 whitespace-nowrap rounded-full bg-foreground px-2.5 py-0.5 text-[10px] font-medium text-background"
+                  style={{ left: "75%" }}
+                >
+                  ↓ 査定額がわかる（約7日後）
+                </div>
+              </div>
+            </div>
+
+            {/* urerun */}
+            <div>
+              <div className="flex items-baseline justify-between gap-3">
+                <div className="text-xs font-semibold uppercase tracking-widest text-gold">
+                  urerun
+                </div>
+                <div className="text-xs text-muted-foreground">
+                  査定額がわかるまで <span className="font-serif text-base text-gold">30秒</span>
+                </div>
+              </div>
+              <div className="mt-3 relative">
+                <div className="flex h-9 overflow-hidden rounded-full border border-gold/40 bg-gold/5 text-[10px] sm:text-xs">
+                  <div className="flex items-center justify-center bg-gold/20 px-3 font-medium text-foreground" style={{ width: "8%" }}>
+                    AI
+                  </div>
+                  <div className="flex items-center justify-center border-l border-gold/30 px-3 text-muted-foreground" style={{ width: "30%" }}>
+                    発送・到着
+                  </div>
+                  <div className="flex items-center justify-center border-l border-gold/30 px-3 text-muted-foreground" style={{ width: "32%" }}>
+                    鑑定士が最終確認
+                  </div>
+                  <div className="flex items-center justify-center border-l border-gold/30 px-3 text-muted-foreground" style={{ width: "30%" }}>
+                    入金（最短当日）
+                  </div>
+                </div>
+                <div
+                  aria-hidden
+                  className="pointer-events-none absolute -top-1 h-11 border-l-2 border-dashed border-gold"
+                  style={{ left: "8%" }}
+                />
+                <div
+                  className="absolute -top-7 -translate-x-1/2 whitespace-nowrap rounded-full bg-gold px-2.5 py-0.5 text-[10px] font-medium text-gold-foreground"
+                  style={{ left: "8%" }}
+                >
+                  ↓ 査定額がわかる（30秒）
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <p className="mt-8 text-center text-xs text-muted-foreground">
+            ※ 帯の長さは所要時間のイメージです。発送・鑑定の時間は変わりませんが、<span className="font-medium text-foreground">「売るか決める判断」が圧倒的に早く</span> できます。
           </p>
         </div>
 
