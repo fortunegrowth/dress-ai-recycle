@@ -95,8 +95,8 @@ export function Hero() {
             </div>
           </div>
 
-          <div className="flex justify-center lg:justify-end overflow-visible">
-            <div className="origin-top scale-[0.5] sm:scale-100 -my-[80px] sm:my-0 -mx-[80px] sm:mx-0">
+          <div className="flex justify-center lg:justify-end overflow-hidden">
+            <div className="origin-top-right scale-[0.55] sm:scale-100 -my-[72px] sm:my-0 -mr-4 sm:mr-0">
               <PhoneMockup />
             </div>
           </div>
