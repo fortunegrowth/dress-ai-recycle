@@ -56,8 +56,8 @@ export function Hero() {
       />
 
       <div className="relative z-10 mx-auto flex min-h-[100svh] max-w-6xl flex-col justify-center px-5 py-24 sm:px-8">
-        <div className="grid grid-cols-[1.3fr_1fr] items-center gap-4 sm:gap-8 lg:grid-cols-[1.1fr_1fr] lg:gap-10">
-          <div className="reveal">
+        <div className="grid grid-cols-[1.25fr_1fr] items-center gap-3 sm:gap-8 lg:grid-cols-[1.1fr_1fr] lg:gap-10">
+          <div>
             <div className="flex flex-wrap gap-1.5 sm:gap-2">
               <span className="inline-flex items-center gap-1 sm:gap-1.5 rounded-full border border-gold/60 bg-primary/50 px-2 sm:px-3 py-0.5 sm:py-1 text-[10px] sm:text-[11px] font-medium backdrop-blur">
                 <Sparkles className="h-3 w-3 sm:h-3.5 sm:w-3.5 text-gold" />
@@ -95,8 +95,10 @@ export function Hero() {
             </div>
           </div>
 
-          <div className="reveal flex justify-center lg:justify-end" style={{ ["--reveal-delay" as never]: "200ms" }}>
-            <PhoneMockup />
+          <div className="flex justify-center lg:justify-end">
+            <div className="origin-center scale-[0.55] sm:scale-100 -my-16 sm:my-0">
+              <PhoneMockup />
+            </div>
           </div>
         </div>
       </div>
@@ -119,7 +121,7 @@ function PhoneMockup() {
         aria-hidden
         className="absolute -inset-8 rounded-[3rem] bg-gold/20 blur-3xl"
       />
-      <div className="relative w-[140px] sm:w-[320px] rounded-[1.5rem] sm:rounded-[2.5rem] border-[6px] sm:border-[10px] border-neutral-900 bg-neutral-900 shadow-2xl shadow-black/60">
+      <div className="relative w-[320px] rounded-[2.5rem] border-[10px] border-neutral-900 bg-neutral-900 shadow-2xl shadow-black/60">
         {/* notch */}
         <div className="absolute left-1/2 top-0 z-20 h-5 w-24 -translate-x-1/2 rounded-b-2xl bg-neutral-900" />
         <div className="overflow-hidden rounded-[1.9rem] bg-background text-foreground">
