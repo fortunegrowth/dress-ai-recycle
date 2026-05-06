@@ -129,38 +129,38 @@ function PhoneMockup() {
             <span>urerun</span>
           </div>
 
-          <div className="px-5 pb-6">
+          <div className="px-3 sm:px-5 pb-3 sm:pb-6">
             {/* image area */}
-            <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-muted">
+            <div className="relative aspect-[4/5] overflow-hidden rounded-lg sm:rounded-2xl bg-muted">
               <img
                 src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&w=600&q=80"
                 alt="査定中のアイテム"
                 className="h-full w-full object-cover"
               />
-              <div className="absolute left-3 top-3 inline-flex items-center gap-1 rounded-full bg-background/90 px-2 py-1 text-[10px] font-medium backdrop-blur">
-                <Camera className="h-3 w-3 text-gold" />
+              <div className="absolute left-1.5 top-1.5 sm:left-3 sm:top-3 inline-flex items-center gap-0.5 sm:gap-1 rounded-full bg-background/90 px-1.5 sm:px-2 py-0.5 sm:py-1 text-[7px] sm:text-[10px] font-medium backdrop-blur">
+                <Camera className="h-2 w-2 sm:h-3 sm:w-3 text-gold" />
                 AI解析中
               </div>
             </div>
 
-            <div className="mt-4">
-              <p className="text-[10px] uppercase tracking-widest text-muted-foreground">Brand</p>
-              <p className="font-serif text-base leading-tight">sacai / Wool Coat</p>
+            <div className="mt-2 sm:mt-4">
+              <p className="text-[7px] sm:text-[10px] uppercase tracking-widest text-muted-foreground">Brand</p>
+              <p className="font-serif text-[10px] sm:text-base leading-tight">sacai / Wool Coat</p>
             </div>
 
-            <div className="mt-4 rounded-2xl border border-gold/40 bg-gold/5 p-4">
-              <p className="text-[10px] uppercase tracking-widest text-gold">査定結果</p>
-              <div className="mt-1 flex items-baseline gap-1">
-                <span className="font-serif text-3xl font-medium">¥48,200</span>
-                <span className="text-xs text-muted-foreground">+ クーポン ¥2,000</span>
+            <div className="mt-2 sm:mt-4 rounded-lg sm:rounded-2xl border border-gold/40 bg-gold/5 p-2 sm:p-4">
+              <p className="text-[7px] sm:text-[10px] uppercase tracking-widest text-gold">査定結果</p>
+              <div className="mt-0.5 sm:mt-1 flex items-baseline gap-1 flex-wrap">
+                <span className="font-serif text-base sm:text-3xl font-medium">¥48,200</span>
+                <span className="text-[7px] sm:text-xs text-muted-foreground">+ ¥2,000</span>
               </div>
-              <div className="mt-2 flex items-center gap-1 text-[10px] text-muted-foreground">
-                <CheckCircle2 className="h-3 w-3 text-gold" />
-                相場：¥42,000 – ¥52,000
+              <div className="mt-1 sm:mt-2 flex items-center gap-0.5 sm:gap-1 text-[7px] sm:text-[10px] text-muted-foreground">
+                <CheckCircle2 className="h-2 w-2 sm:h-3 sm:w-3 text-gold" />
+                相場：¥42k – ¥52k
               </div>
             </div>
 
-            <button className="mt-4 w-full rounded-full bg-foreground py-3 text-xs font-medium text-background">
+            <button className="mt-2 sm:mt-4 w-full rounded-full bg-foreground py-1.5 sm:py-3 text-[8px] sm:text-xs font-medium text-background">
               この価格で承諾する
             </button>
           </div>
