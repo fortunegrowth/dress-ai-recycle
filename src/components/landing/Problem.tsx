@@ -3,7 +3,7 @@ import { Gem, PackageX, HeartCrack } from "lucide-react";
 const items = [
   {
     icon: Gem,
-    title: "デザイナーズの価値、わかってもらえない",
+    title: "デザイナーズの価値、\nわかってもらえない",
     text: "数日待って査定されるのに、思ったより低い価格。デザイナーズの価値をちゃんと評価してもらえた気がしない。",
   },
   {
