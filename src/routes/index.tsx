@@ -121,6 +121,7 @@ function Index() {
         <CTASection />
       </main>
       <Footer />
+      <StickyCTA />
     </div>
   );
 }
