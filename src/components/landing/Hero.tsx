@@ -48,7 +48,7 @@ export function Hero() {
               </span>
             </div>
 
-            <h1 className="mt-3 sm:mt-6 font-serif text-[1.4rem] leading-[1.3] sm:text-6xl sm:leading-[1.2] text-balance whitespace-nowrap sm:whitespace-normal">
+            <h1 className="mt-3 sm:mt-6 font-serif text-[1rem] leading-[1.35] sm:text-6xl sm:leading-[1.2] text-balance whitespace-nowrap sm:whitespace-normal">
               売るかどうか、<br />
               <span className="text-gold">今日中</span>に決められる。
             </h1>
@@ -99,7 +99,7 @@ function PhoneMockup() {
         aria-hidden
         className="absolute -inset-8 rounded-[3rem] bg-gold/20 blur-3xl"
       />
-      <div className="relative w-[120px] sm:w-[320px] rounded-[1.1rem] sm:rounded-[2.5rem] border-[4px] sm:border-[10px] border-neutral-900 bg-neutral-900 shadow-2xl shadow-black/60">
+      <div className="relative w-[150px] sm:w-[320px] rounded-[1.25rem] sm:rounded-[2.5rem] border-[5px] sm:border-[10px] border-neutral-900 bg-neutral-900 shadow-2xl shadow-black/60">
         {/* notch */}
         <div className="absolute left-1/2 top-0 z-20 h-3 sm:h-5 w-14 sm:w-24 -translate-x-1/2 rounded-b-xl sm:rounded-b-2xl bg-neutral-900" />
         <div className="overflow-hidden rounded-[1.1rem] sm:rounded-[1.9rem] bg-background text-foreground">
