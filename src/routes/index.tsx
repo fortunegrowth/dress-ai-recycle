@@ -7,6 +7,7 @@ import { Problem } from "@/components/landing/Problem";
 import { Brands } from "@/components/landing/Brands";
 import { Condition } from "@/components/landing/Condition";
 import { Solution } from "@/components/landing/Solution";
+import { SolutionBridge } from "@/components/landing/SolutionBridge";
 import { WhyUs } from "@/components/landing/WhyUs";
 import { Cycle } from "@/components/landing/Cycle";
 import { FAQ } from "@/components/landing/FAQ";
@@ -110,6 +111,7 @@ function Index() {
       <main>
         <Hero />
         <Problem />
+        <SolutionBridge />
         <Solution />
         <MidCTA />
         <Condition />

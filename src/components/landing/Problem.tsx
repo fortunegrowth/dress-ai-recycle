@@ -1,20 +1,20 @@
-import { Gem, PackageX, HeartCrack } from "lucide-react";
+import { HelpCircle, ShoppingBag, Scale } from "lucide-react";
 
 const items = [
   {
-    icon: Gem,
-    title: "デザイナーズの価値、\nわかってもらえない",
-    text: "数日待って査定されるのに、思ったより低い価格。デザイナーズの価値をちゃんと評価してもらえた気がしない。",
+    icon: HelpCircle,
+    title: "買取価格が適正かどうか、\nわからない",
+    text: "数日待って査定されても、その価格が本当に適正なのか判断できない。結局、言われた価格で売るしかなかった。",
   },
   {
-    icon: PackageX,
-    title: "フリマサイトは手間がかかりすぎる",
-    text: "出品・値下げ交渉・梱包・発送・クレーム対応。まとめて手放したい時は、特につらい。",
+    icon: ShoppingBag,
+    title: "フリマの方が\n高く売れるかもしれない",
+    text: "でも相場を調べて、写真を撮って、文章を書いて、交渉して……その手間を考えると踏み出せない。",
   },
   {
-    icon: HeartCrack,
-    title: "高かったのに、\n安く手放すのは嫌だ",
-    text: "新しいシーズンの服も欲しい。でも手元の服は可愛いし、状態もいい。ブランドの価値をわかってくれる場所で、納得できる価格で売りたい。",
+    icon: Scale,
+    title: "比べられないから、\n決断できない",
+    text: "フリマで売るべきか、買取に出すべきか。判断する材料がなければ、クローゼットに眠ったまま。",
   },
 ];
 
@@ -35,9 +35,9 @@ export function Problem() {
         <div className="reveal max-w-2xl">
           <p className="text-[11px] uppercase tracking-[0.25em] text-gold">Problem</p>
           <h2 className="mt-4 font-serif text-3xl sm:text-5xl leading-tight">
-            手放したいのに、
+            売りたいのに、
             <br />
-            なぜか踏み出せない。
+            どこで売るのが得か、わからない。
           </h2>
         </div>
 
@@ -59,10 +59,10 @@ export function Problem() {
           ))}
         </div>
 
-        <p className="reveal mt-12 text-sm text-muted-foreground max-w-3xl">
-          ファッションが好きな方も、ファッションに携わるなかで手元にアイテムが増えてしまう方も。
+        <p className="reveal mt-12 text-center font-serif text-lg sm:text-xl leading-relaxed text-foreground max-w-3xl mx-auto">
+          決断できないのは、意志が弱いからじゃない。
           <br />
-          urerunは「ブランドの価値を理解してくれる買取先」を探しているすべての方のために。
+          比べる材料がないから、決められないんです。
         </p>
       </div>
     </section>
