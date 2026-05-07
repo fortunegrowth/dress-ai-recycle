@@ -35,7 +35,7 @@ export function Hero() {
         }}
       />
 
-      <div className="relative z-10 mx-auto flex min-h-[60svh] sm:min-h-[100svh] max-w-6xl flex-col justify-center px-5 py-16 sm:py-24 sm:px-8">
+      <div className="relative z-10 mx-auto flex min-h-[60svh] sm:min-h-[100svh] max-w-6xl flex-col justify-center px-5 py-32 sm:py-24 sm:px-8">
         <div className="grid grid-cols-[1.5fr_1fr] items-center gap-3 sm:gap-8 lg:grid-cols-[1.1fr_1fr] lg:gap-10">
           <div className="min-w-0">
             <div className="flex flex-col items-start gap-1.5 sm:flex-row sm:flex-wrap sm:gap-2">
@@ -100,7 +100,7 @@ function PhoneMockup() {
         aria-hidden
         className="absolute -inset-8 rounded-[3rem] bg-gold/20 blur-3xl"
       />
-      <div className="relative w-[150px] sm:w-[320px] rounded-[1.25rem] sm:rounded-[2.5rem] border-[5px] sm:border-[10px] border-neutral-900 bg-neutral-900 shadow-2xl shadow-black/60">
+      <div className="relative w-[100px] sm:w-[320px] rounded-[1.25rem] sm:rounded-[2.5rem] border-[5px] sm:border-[10px] border-neutral-900 bg-neutral-900 shadow-2xl shadow-black/60">
         {/* notch */}
         <div className="absolute left-1/2 top-0 z-20 h-3 sm:h-5 w-14 sm:w-24 -translate-x-1/2 rounded-b-xl sm:rounded-b-2xl bg-neutral-900" />
         <div className="overflow-hidden rounded-[1.1rem] sm:rounded-[1.9rem] bg-background text-foreground">
