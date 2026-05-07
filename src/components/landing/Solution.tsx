@@ -89,7 +89,7 @@ export function Solution() {
 
           {/* urerun */}
           <div className="relative rounded-3xl border-2 border-gold/50 bg-background p-6 sm:p-8 shadow-lg shadow-gold/10">
-            <div className="absolute -top-3 right-6 rounded-full bg-gold px-3 py-1 text-[10px] font-semibold uppercase tracking-widest text-gold-foreground">
+            <div className="absolute -top-3 right-6 rounded-full bg-gold px-3 py-1 text-[10px] font-semibold tracking-widest text-gold-foreground">
               urerunなら
             </div>
             <div className="flex items-center justify-between">
