@@ -26,7 +26,7 @@ export function SolutionBridge() {
           <p className="text-[11px] uppercase tracking-[0.25em] text-gold">The Answer</p>
           <h2 className="mt-4 font-serif text-3xl sm:text-5xl leading-tight">
             だから、両方の価格を
-            <br className="sm:hidden" />
+            <br />
             同時に見せます。
           </h2>
         </div>
