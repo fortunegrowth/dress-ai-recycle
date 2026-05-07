@@ -56,7 +56,6 @@ export function CTASection() {
               className="inline-flex items-center justify-center gap-2 rounded-full bg-gold px-8 py-4 text-sm font-medium text-gold-foreground shadow-xl shadow-black/30 transition hover:opacity-90"
             >
               無料で査定を申し込む
-              <ArrowRight className="h-4 w-4" />
             </a>
             <a
               href="/login"

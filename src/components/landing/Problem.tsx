@@ -37,7 +37,9 @@ export function Problem() {
           <h2 className="mt-4 font-serif text-3xl sm:text-5xl leading-tight">
             売りたいのに、
             <br />
-            どこで売るのが得か、わからない。
+            どこで売るのが得か
+            <br />
+            わからない。
           </h2>
         </div>
 
@@ -60,9 +62,11 @@ export function Problem() {
         </div>
 
         <p className="reveal mt-12 text-center font-serif text-lg sm:text-xl leading-relaxed text-foreground max-w-3xl mx-auto">
-          決断できないのは、意志が弱いからじゃない。
+          決断できないのは、
           <br />
-          比べる材料がないから、決められないんです。
+          比べる材料がないから、
+          <br />
+          決められないんです。
         </p>
       </div>
     </section>

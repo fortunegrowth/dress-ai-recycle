@@ -38,7 +38,6 @@ function MidCTA() {
           className="mt-6 inline-flex items-center justify-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-medium text-primary-foreground shadow-lg shadow-primary/20 transition hover:opacity-90"
         >
           無料で査定額を見る
-          <ArrowRight className="h-4 w-4" />
         </a>
       </div>
     </section>
