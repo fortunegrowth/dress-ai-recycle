@@ -5,7 +5,7 @@ import {
   UserCheck,
   ShieldCheck,
   Wallet,
-  ArrowRight,
+  
   ArrowDown,
   Clock,
   Zap,
