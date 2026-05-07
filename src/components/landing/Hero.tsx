@@ -36,40 +36,40 @@ export function Hero() {
       />
 
       <div className="relative z-10 mx-auto flex min-h-[100svh] max-w-6xl flex-col justify-center px-5 py-20 sm:py-24 sm:px-8">
-        <div className="grid grid-cols-[1.7fr_1fr] items-center gap-3 sm:gap-8 lg:grid-cols-[1.1fr_1fr] lg:gap-10">
+        <div className="grid grid-cols-[1.5fr_1fr] items-center gap-3 sm:gap-8 lg:grid-cols-[1.1fr_1fr] lg:gap-10">
           <div className="min-w-0">
             <div className="flex flex-col items-start gap-1.5 sm:flex-row sm:flex-wrap sm:gap-2">
-              <span className="inline-flex items-center gap-1 sm:gap-1.5 rounded-full border border-gold/60 bg-primary/50 px-2 sm:px-3 py-0.5 sm:py-1 text-[10px] sm:text-[11px] font-medium backdrop-blur">
+              <span className="inline-flex items-center gap-1 sm:gap-1.5 rounded-full border border-gold/60 bg-primary/50 px-2 sm:px-3 py-0.5 sm:py-1 text-[9px] sm:text-[11px] font-medium backdrop-blur">
                 <Sparkles className="h-2.5 w-2.5 sm:h-3.5 sm:w-3.5 text-gold" />
                 30秒査定
               </span>
-              <span className="inline-flex items-center rounded-full border border-primary-foreground/30 bg-primary/50 px-2 sm:px-3 py-0.5 sm:py-1 text-[10px] sm:text-[11px] backdrop-blur">
+              <span className="inline-flex items-center rounded-full border border-primary-foreground/30 bg-primary/50 px-2 sm:px-3 py-0.5 sm:py-1 text-[9px] sm:text-[11px] backdrop-blur">
                 着用回数が少ないほど高価買取
               </span>
             </div>
 
-            <h1 className="mt-4 sm:mt-6 font-serif text-[2rem] leading-[1.25] sm:text-6xl sm:leading-[1.2] text-balance">
+            <h1 className="mt-3 sm:mt-6 font-serif text-[1.5rem] leading-[1.3] sm:text-6xl sm:leading-[1.2] text-balance">
               売るかどうか、<br />
               <span className="text-gold">今日中</span>に<br />
               決められる。
             </h1>
 
-            <p className="mt-4 sm:mt-5 text-[13px] sm:text-lg leading-[1.7] text-primary-foreground/90">
+            <p className="mt-3 sm:mt-5 text-[10px] sm:text-lg leading-relaxed text-primary-foreground/90">
               写真を送るだけで30秒。<br />
-              店舗にも行かず、数日も待たず、<br />
-              家にいながら適正価格がわかります。
+              店舗にも行かず、<br className="sm:hidden" />数日も待たず、<br />
+              家にいながら<br className="sm:hidden" />適正価格がわかります。
             </p>
 
-            <div className="mt-5 sm:mt-7 flex flex-col sm:flex-row gap-2.5 sm:gap-3">
+            <div className="mt-4 sm:mt-7 flex flex-col sm:flex-row gap-2 sm:gap-3">
               <a
                 href="#cta"
-                className="inline-flex items-center justify-center rounded-full bg-gold px-4 sm:px-6 py-3 sm:py-3.5 text-[13px] sm:text-sm font-medium text-gold-foreground shadow-xl shadow-black/30 transition hover:opacity-90"
+                className="inline-flex items-center justify-center rounded-full bg-gold px-3 sm:px-6 py-2.5 sm:py-3.5 text-[11px] sm:text-sm font-medium text-gold-foreground shadow-xl shadow-black/30 transition hover:opacity-90"
               >
                 無料で査定を申し込む
               </a>
               <a
                 href="#how"
-                className="inline-flex items-center justify-center rounded-full border border-primary-foreground/40 bg-primary-foreground/10 px-4 sm:px-6 py-3 sm:py-3.5 text-[13px] sm:text-sm font-medium text-primary-foreground backdrop-blur transition hover:bg-primary-foreground/20"
+                className="inline-flex items-center justify-center rounded-full border border-primary-foreground/40 bg-primary-foreground/10 px-3 sm:px-6 py-2.5 sm:py-3.5 text-[11px] sm:text-sm font-medium text-primary-foreground backdrop-blur transition hover:bg-primary-foreground/20"
               >
                 仕組みを見る
               </a>
