@@ -1,4 +1,4 @@
-import { Wallet, Lock, Ticket, ArrowRight } from "lucide-react";
+import { Wallet, Lock, Ticket } from "lucide-react";
 
 const points = [
   {
