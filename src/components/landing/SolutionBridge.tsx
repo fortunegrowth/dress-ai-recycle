@@ -1,4 +1,4 @@
-import { Wallet, Lock, Ticket, ArrowRight } from "lucide-react";
+import { Wallet, Lock, Ticket } from "lucide-react";
 
 const points = [
   {
@@ -66,7 +66,7 @@ export function SolutionBridge() {
                 <Icon className="h-6 w-6 text-gold" />
               </div>
               <h3 className="mt-5 font-serif text-base leading-snug">{title}</h3>
-              <p className="mt-2 text-xs text-muted-foreground leading-relaxed">→ {sub}</p>
+              <p className="mt-2 text-xs text-muted-foreground leading-relaxed">{sub}</p>
             </div>
           ))}
         </div>
@@ -77,7 +77,6 @@ export function SolutionBridge() {
             className="inline-flex items-center justify-center gap-2 rounded-full border border-gold/40 bg-background px-5 py-2.5 text-xs font-medium text-foreground transition hover:bg-gold/5"
           >
             まず価格を確認してみる
-            <ArrowRight className="h-3.5 w-3.5" />
           </a>
         </div>
       </div>

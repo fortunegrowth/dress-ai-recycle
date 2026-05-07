@@ -5,7 +5,7 @@ import {
   UserCheck,
   ShieldCheck,
   Wallet,
-  ArrowRight,
+  
   ArrowDown,
   Clock,
   Zap,
@@ -54,7 +54,7 @@ export function Solution() {
             <div className="flex items-center justify-between">
               <div className="inline-flex items-center gap-2 rounded-full border border-border bg-secondary px-3 py-1 text-[11px] font-semibold uppercase tracking-widest text-muted-foreground">
                 <Clock className="h-3.5 w-3.5" />
-                従来の買取
+                従来の宅配買取
               </div>
               <div className="text-right">
                 <div className="text-[10px] uppercase tracking-widest text-muted-foreground">査定額がわかるまで</div>
@@ -221,7 +221,6 @@ export function Solution() {
             className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-8 py-4 text-sm font-medium text-primary-foreground shadow-lg shadow-primary/20 transition hover:opacity-90"
           >
             無料で査定を申し込む
-            <ArrowRight className="h-4 w-4" />
           </a>
         </div>
       </div>

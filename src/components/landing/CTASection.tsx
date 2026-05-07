@@ -1,4 +1,4 @@
-import { ArrowRight, Sparkles } from "lucide-react";
+import { Sparkles } from "lucide-react";
 
 const CTA_BG =
   "https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=1920&q=80";
@@ -56,7 +56,6 @@ export function CTASection() {
               className="inline-flex items-center justify-center gap-2 rounded-full bg-gold px-8 py-4 text-sm font-medium text-gold-foreground shadow-xl shadow-black/30 transition hover:opacity-90"
             >
               無料で査定を申し込む
-              <ArrowRight className="h-4 w-4" />
             </a>
             <a
               href="/login"
