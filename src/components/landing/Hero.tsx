@@ -48,9 +48,10 @@ export function Hero() {
               </span>
             </div>
 
-            <h1 className="mt-3 sm:mt-6 font-serif text-[1rem] leading-[1.35] sm:text-6xl sm:leading-[1.2] text-balance whitespace-nowrap sm:whitespace-normal">
+            <h1 className="mt-3 sm:mt-6 font-serif text-[1.5rem] leading-[1.3] sm:text-6xl sm:leading-[1.2] text-balance">
               売るかどうか、<br />
-              <span className="text-gold">今日中</span>に決められる。
+              <span className="text-gold">今日中</span>に<br />
+              決められる。
             </h1>
 
             <p className="mt-3 sm:mt-5 text-[10px] sm:text-lg leading-relaxed text-primary-foreground/90">
